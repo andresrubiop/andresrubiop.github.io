@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://andresrubiop.github.io/sitemap.xml
