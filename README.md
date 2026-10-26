@@ -1,29 +1,26 @@
-# Andrés Rubio Proaño · Engineering portfolio
+# Andrés Rubio Proaño · GitHub Pages entry point
 
-**[Visit the site →](https://andresrubiop.github.io/)**
+**[Website & CV →](https://www.andresrubiop.com/)** · **[Engineering portfolio →](https://www.andresrubiop.com/#portfolio)**
 
-A bilingual English/Spanish presentation of my work in high-performance computing and AI: selected open-source projects, research, experience and teaching. The dark aubergine and orange palette follows [my main website](https://www.andresrubiop.com).
+This GitHub Pages user site redirects to my main website. The open-source portfolio now lives there alongside my experience, publications and teaching, in Spanish, English, French, Catalan and Japanese.
 
-## Run locally
+## Behavior
 
-No build tools or external JavaScript dependencies are required.
+- The root opens `https://www.andresrubiop.com/` with a browser redirect.
+- Supported `?lang=es|en|fr|ca|ja` preferences are forwarded.
+- Previous `#work` and `#about` links map to `#portfolio` and `#expertise`.
+- Only predefined sections and languages are forwarded; the target origin is fixed.
+- A meta refresh and visible links provide a fallback without JavaScript.
+- This is a static browser redirect, not a server-side HTTP 301/302.
+
+GitHub Pages serves the repository root on `main` with `.nojekyll`. No custom domain or CNAME is configured, so existing project sites such as [the operating systems course](https://andresrubiop.github.io/fso-uti/) keep their GitHub Pages URLs. The former standalone portfolio remains in Git history.
+
+## Local check
 
 ```bash
 python3 -m http.server 4180 --bind 127.0.0.1
 ```
 
-Open <http://127.0.0.1:4180>. Use `?lang=en` or `?lang=es` to choose a language; the language buttons remember a preference locally when browser storage is available. The complete English content and navigation also work without JavaScript.
+Opening the root intentionally leaves the local server and navigates to the public website.
 
-## Publishing
-
-GitHub Pages serves `main` from the repository root. `.nojekyll` makes this a plain static site. Pushing to `main` publishes updates through GitHub Pages. No custom domain, backend, analytics, secret or external font service is required.
-
-## Content and assets
-
-- Project descriptions link to their public repositories and reflect their documented scope. Research prototypes are identified as such.
-- `assets/a100-throughput.svg` comes from [gpu-inference-benchmarks](https://github.com/andresrubiop/gpu-inference-benchmarks). Historical campaign: Andrés Rubio and Joel Morales, July 2026, CEDIA compute resources. Configurations use different models/quantization; the figure is not a controlled ranking of serving frameworks. See the source repository for data and methodology.
-- `assets/leo.svg` comes from [leo-desktop](https://github.com/andresrubiop/leo-desktop), MIT-licensed original project artwork.
-- The landmark pipeline and scheduling grid are explanatory illustrations, not screenshots of recorded participant data or real schedules.
-- The portrait is the same public profile photograph used on my main website. Text and personal portrait remain © Andrés Rubio Proaño. Source code and original interface artwork are MIT-licensed; see [LICENSE](LICENSE).
-
-Selected projects remain independently licensed and maintained in their own repositories.
+The interface source and favicon are MIT-licensed. Personal names and biographical text remain © Andrés Rubio Proaño.
